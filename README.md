@@ -20,8 +20,7 @@ module.exports = {
         // these are the default options
         new VersioningPlugin({
             cleanup: true,                      // should it remove old files?
-            basePath: './',                     // manifest.json base path
-            manifestFilename: 'manifest.json'   // name of the manifest file
+            manifestPath: path.join(__dirname, 'manifest.json')   // name and path of the manifest file
         }),
         new WebpackMd5Hash()
     ]
